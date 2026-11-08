@@ -1,0 +1,51 @@
+Project Structure: 주요 파일 2~3개의 역할
+App.jsx = 기본 HTML과 Java Script 기능들이 구현되어있다.
+App.css = App.jsx에 구현된 HTML을 꾸미는 역할을 한다.
+Main.jsx = root를 만들어 다른 파일들을 실행한다.
+
+React Component: 주요 컴포넌트 1~2개의 역할
+App.jsx의 deleteTask = filter 사용해서 해당 todo 작업을 삭제한 새로운 Tasks 만듬
+completeTask = 특정 task의 인덱스를 받아 완료된 칸으로 옮기고 기존 todo에서 제거함
+
+Code Analysis: 코드 1개(약 5~15줄)를 선택하여 동작 원리 설명
+
+const saveEdit = () => {
+    const updatedTasks = [...tasks];
+    updatedTasks[editIndex].text = editText;
+    setTasks(updatedTasks);
+    setEditIndex(null);
+  };
+
+  <input value={editText} onChange={(e) => setEditText(e.target.value)} />
+  <button onClick={saveEdit}>💾 Save</button>
+
+  input을 통해 editText를 입력받아 save 버튼을 누르면 ...tasks를 통해 원래 내용을 받고 updatedTasks[index].text = 로 내용을 변경한 후에 setTasks를 통해 화면에 표시한다. 
+
+수정 파일명과 변경 전/후
+App.jsx 변경 전 제목 To-Do List  변경 후 OSS Todo CRUD
+App.css 변경 전 버튼 색 background-color: #2b946c 변경 후 background-color: lightblue;
+App.jsx 변경 전 Task input위에 라벨이 없었음 변경 후 72번 줄에 <p className="field-label">Task</p> 추가.
+
+
+Project Information: 프로젝트 소개, 선택 이유, 원본 GitHub URL 및 라이선스
+ 간단하게 Todo 항목들을 관리할 수 있는 CRUD 프로그램입니다. 코드가 가볍고, 로그인이나 api를 만들어야 하는 필요가 없어서 선정하였습니다. 
+ 원본 Github URL: https://github.com/Jadec15/react-todo-app
+
+Installation: 설치·실행 방법 및 실행 화면
+npm install 후 npm run dev
+![alt text](image-1.png)
+
+Deployment: 실제 접근 가능한 Vercel URL
+https://oss-week10.vercel.app
+https://vercel.com/a-34be/oss-week10
+
+Weekly Review:
+새롭게 배운 내용 3가지
+CRA와 vite의 차이점, github에서 프로그램을 찾는 방법, json을 install해서 프로그램을 다운받는 방법
+
+어려웠던 점과 해결 방법
+github에서 찾아본 다양한 프로그램들이 react language:JS로 검색했음에도 phyton이 필요한 프로그램도 있고, 계정을 만들어서 접근해야 하는 것도 있고 너무 다양하고 어려웠다. AI에게 open api이고 JS와 vite만 연관된 간단한 프로그램을 찾아달라고 부탁했다.
+
+AI 활용 내용 및 느낀 점
+프로그램이 너무 많고 다양해 제미나이에게 간단한 react 프로그램들을 10개 찾아서 간추려 달라고 하고 훑어 사용했다.
+확실히 많은 정보를 다루는 용도로는 빠르고 좋은 것 같다.
