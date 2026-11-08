@@ -16,6 +16,16 @@ const saveEdit = () => {
     setEditIndex(null);
   };
 
+  <input value={editText} onChange={(e) => setEditText(e.target.value)} />
+  <button onClick={saveEdit}>💾 Save</button>
+
+  input을 통해 editText를 입력받아 save 버튼을 누르면 ...tasks를 통해 원래 내용을 받고 updatedTasks[index].text = 로 내용을 변경한 후에 setTasks를 통해 화면에 표시한다. 
+
+수정 파일명과 변경 전/후
+App.jsx 변경 전 제목 To-Do List  변경 후 OSS Todo CRUD
+App.css 변경 전 버튼 색 background-color: #2b946c 변경 후 background-color: lightblue;
+App.jsx 변경 전 Task input위에 라벨이 없었음 변경 후 72번 줄에 <p className="field-label">Task</p> 추가.
+
 
 Project Information: 프로젝트 소개, 선택 이유, 원본 GitHub URL 및 라이선스
  간단하게 Todo 항목들을 관리할 수 있는 CRUD 프로그램입니다. 코드가 가볍고, 로그인이나 api를 만들어야 하는 필요가 없어서 선정하였습니다. 
@@ -26,20 +36,19 @@ npm install 후 npm run dev
 ![alt text](image-1.png)
 
 Deployment: 실제 접근 가능한 Vercel URL
+https://oss-week10.vercel.app
+https://vercel.com/a-34be/oss-week10
+
 Weekly Review:
 새롭게 배운 내용 3가지
+
 어려웠던 점과 해결 방법
+
 AI 활용 내용 및 느낀 점
 
-  <input value={editText} onChange={(e) => setEditText(e.target.value)} />
-  <button onClick={saveEdit}>💾 Save</button>
+  
 
-  input을 통해 editText를 입력받아 save 버튼을 누르면 ...tasks를 통해 원래 내용을 받고 updatedTasks[index].text = 로 내용을 변경한 후에 setTasks를 통해 화면에 표시한다. 
 
-수정 파일명과 변경 전/후
-App.jsx 변경 전 제목 To-Do List  변경 후 OSS Todo CRUD
-App.css 변경 전 버튼 색 background-color: #2b946c 변경 후 background-color: lightblue;
-App.jsx 변경 전 Task input위에 라벨이 없었음 변경 후 72번 줄에 <p className="field-label">Task</p> 추가.
 
 # React To-Do List App
 
