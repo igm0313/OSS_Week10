@@ -33,7 +33,7 @@ Project Information: 프로젝트 소개, 선택 이유, 원본 GitHub URL 및 �
 
 Installation: 설치·실행 방법 및 실행 화면
 npm install 후 npm run dev
-![alt text](image-1.png)
+![alt text](image.png)
 
 Deployment: 실제 접근 가능한 Vercel URL
 https://oss-week10.vercel.app
